@@ -1,0 +1,67 @@
+{
+  "slug": "/magic-systems/",
+  "pageFamily": "collection",
+  "meta": {
+    "title": "Magic Systems | House Pendale",
+    "description": "Learn the foundational magical systems of House Pendale: Pulse Resonance, Wordframe, and Covenant.",
+    "ogImage": "/images/Ritual_Room_Canon_042226.png"
+  },
+  "hero": {
+    "eyebrow": "Magic Systems",
+    "title": "This world runs on rules you can feel.",
+    "support": "The Pendaleverse runs on embodied, linguistic, and oath-bound foundations. Learn the three systems that give the House its current, its grammar, and the price of stepping fully inside it.",
+    "ctas": [
+      {
+        "label": "Explore Pulse Resonance",
+        "href": "#pulse-resonance",
+        "variant": "primary"
+      },
+      {
+        "label": "Start with the Book",
+        "href": "/books/when-stars-align/",
+        "variant": "secondary"
+      }
+    ],
+    "media": {
+      "src": "/images/Ritual_Room_Canon_042226.png",
+      "alt": "A ritual room inside House Pendale",
+      "kind": "atmosphere"
+    }
+  },
+  "sections": [
+    {
+      "id": "collection-intro",
+      "eyebrow": "Collection intro",
+      "title": "Three systems. Clean edges. Real consequence.",
+      "body": "Trust begins with proof that a world's power means something. These three systems form the public foundation of House Pendale, and each one changes what can happen once you cross the threshold."
+    },
+    {
+      "id": "downstream-practices",
+      "eyebrow": "Downstream practices",
+      "title": "Some doors deserve their own room.",
+      "body": "These three systems create practices, disciplines, and effects that reach further than a single overview page should try to pin down. The public site will name the foundation here and let the deeper edges unfold elsewhere, with more care and more space.",
+      "microcopy": "The book shows what the systems feel like in motion.",
+      "ctas": [
+        {
+          "label": "Start with the Book",
+          "href": "/books/when-stars-align/",
+          "variant": "primary"
+        }
+      ]
+    },
+    {
+      "id": "deeper-notes",
+      "eyebrow": "Deeper notes",
+      "title": "Read the edges where they belong.",
+      "body": "For longer essays, evolving interpretations, and system notes that need room to breathe, Substack is the better chamber.",
+      "ctas": [
+        {
+          "label": "Read the Notes",
+          "href": "https://liorapendale.substack.com",
+          "variant": "secondary",
+          "external": true
+        }
+      ]
+    }
+  ]
+}

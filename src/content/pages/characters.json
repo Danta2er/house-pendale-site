@@ -1,0 +1,52 @@
+{
+  "slug": "/characters/",
+  "pageFamily": "collection",
+  "meta": {
+    "title": "Characters | House Pendale",
+    "description": "Meet the characters who shape House Pendale, beginning with the people at the heart of When Stars Align.",
+    "ogImage": "/images/characters/Constellation_grimoire.png"
+  },
+  "hero": {
+    "eyebrow": "Characters",
+    "title": "Some people enter a room. These people change its temperature.",
+    "support": "The House runs on relationships, pressure, witness, and the particular gravity of the people who cross its threshold. Start here with the five public faces most likely to catch your attention and keep it.",
+    "ctas": [
+      {
+        "label": "Meet Elysia",
+        "href": "#elysia",
+        "variant": "primary"
+      },
+      {
+        "label": "Start with When Stars Align",
+        "href": "/books/when-stars-align/",
+        "variant": "secondary"
+      }
+    ],
+    "media": {
+      "src": "/images/characters/Constellation_grimoire.png",
+      "alt": "A vellum grimoire page showing a seven-star constellation with Coren and Elysia revealed in amber script and older marginal notes around the formation.",
+      "kind": "artifact"
+    }
+  },
+  "sections": [
+    {
+      "id": "cast-bridge",
+      "eyebrow": "Cast bridge",
+      "title": "Meet them in motion.",
+      "body": "Character pages can open the door wider. The book is where their chemistry, loyalty, and damage start making weather around you.",
+      "ctas": [
+        {
+          "label": "Start with When Stars Align",
+          "href": "/books/when-stars-align/",
+          "variant": "primary"
+        },
+        {
+          "label": "Read the Notes",
+          "href": "https://liorapendale.substack.com",
+          "variant": "secondary",
+          "external": true
+        }
+      ]
+    }
+  ]
+}

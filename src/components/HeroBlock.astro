@@ -1,0 +1,60 @@
+---
+import CtaLink from "@components/CtaLink.astro";
+
+type HeroCta = {
+  label: string;
+  href: string;
+  variant?: "primary" | "secondary" | "tertiary";
+  external?: boolean;
+};
+
+type Props = {
+  eyebrow?: string;
+  title: string;
+  support: string;
+  ctas: HeroCta[];
+  media?: {
+    src: string;
+    alt: string;
+    kind?: "cover" | "portrait" | "atmosphere" | "artifact";
+  };
+  compact?: boolean;
+};
+
+const {
+  eyebrow,
+  title,
+  support,
+  ctas,
+  media,
+  compact = false,
+} = Astro.props;
+---
+
+<section class:list={["hero-block", compact && "compact"]}>
+  <div class="hero-copy" data-reveal>
+    {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+    <h1>{title}</h1>
+    <p class="hero-support">{support}</p>
+    <div class="button-row">
+      {
+        ctas.map((cta) => (
+          <CtaLink
+            href={cta.href}
+            label={cta.label}
+            variant={cta.variant}
+            external={cta.external}
+          />
+        ))
+      }
+    </div>
+  </div>
+
+  {
+    media && (
+      <figure class:list={["hero-media", media.kind ?? "atmosphere"]} data-reveal>
+        <img src={media.src} alt={media.alt} />
+      </figure>
+    )
+  }
+</section>

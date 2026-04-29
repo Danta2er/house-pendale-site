@@ -1,0 +1,70 @@
+---
+import { siteConfig } from "@data/site";
+
+type Props = {
+  currentPath: string;
+};
+
+const { currentPath } = Astro.props;
+---
+
+<header class="site-header" data-site-header>
+  <div class="header-shell">
+    <a class="brand" href="/">
+      <img
+        class="brand-mark"
+        src="/images/HousePendaleMonogram.png"
+        alt="House Pendale crest"
+      />
+      <span class="brand-copy">
+        <span class="brand-name">{siteConfig.name}</span>
+        <span class="brand-tagline">{siteConfig.tagline}</span>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary">
+      {
+        siteConfig.navigation.map((item) => (
+          <a
+            class="nav-link"
+            href={item.href}
+            target={item.external ? "_blank" : undefined}
+            rel={item.external ? "noopener noreferrer" : undefined}
+            aria-current={currentPath === item.href ? "page" : undefined}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      data-menu-toggle
+    >
+      <span class="menu-toggle-line" aria-hidden="true" />
+      <span>Menu</span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+  <nav aria-label="Mobile">
+    {
+      siteConfig.navigation.map((item) => (
+        <a
+          class="nav-link"
+          href={item.href}
+          target={item.external ? "_blank" : undefined}
+          rel={item.external ? "noopener noreferrer" : undefined}
+          aria-current={currentPath === item.href ? "page" : undefined}
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</div>

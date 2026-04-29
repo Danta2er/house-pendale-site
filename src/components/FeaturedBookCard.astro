@@ -1,0 +1,24 @@
+---
+import CtaLink from "@components/CtaLink.astro";
+
+type Props = {
+  title: string;
+  body: string;
+  status: string;
+  href: string;
+};
+
+const { title, body, status, href } = Astro.props;
+---
+
+<article class="featured-book-card" data-reveal>
+  <div class="featured-book-body">
+    <span class="eyebrow">Featured book</span>
+    <h2>{title}</h2>
+    <p>{body}</p>
+    <p class="microcopy">{status}</p>
+    <div class="button-row">
+      <CtaLink href={href} label={`Read ${title}`} variant="primary" />
+    </div>
+  </div>
+</article>

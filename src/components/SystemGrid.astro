@@ -1,0 +1,46 @@
+---
+import CtaLink from "@components/CtaLink.astro";
+
+type SystemEntry = {
+  id: string;
+  data: {
+    slug: string;
+    name: string;
+    microcopy: string;
+    summary: string;
+  };
+};
+
+type Props = {
+  systems: SystemEntry[];
+};
+
+const { systems } = Astro.props;
+---
+
+<section class="systems-section">
+  <div class="anchor-rail" data-reveal>
+    {
+      systems.map((system) => (
+        <CtaLink
+          href={`#${system.data.slug}`}
+          label={`Explore ${system.data.name}`}
+          variant="tertiary"
+        />
+      ))
+    }
+  </div>
+
+  <div class="system-grid">
+    {
+      systems.map((system) => (
+        <article id={system.data.slug} class="system-card" data-reveal>
+          <span class="eyebrow">Foundational system</span>
+          <h2>{system.data.name}</h2>
+          <p>{system.data.summary}</p>
+          <p class="microcopy">{system.data.microcopy}</p>
+        </article>
+      ))
+    }
+  </div>
+</section>

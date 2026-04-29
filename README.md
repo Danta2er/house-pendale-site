@@ -9,6 +9,7 @@ Static marketing site for House Pendale / Liora Pendale.
 - `public/styles/site.css` contains the shared styling.
 - `public/scripts/site.js` contains the shared client behavior.
 - `public/images/` contains site assets.
+- `docs/briefs/` contains the design-side page contract system plus creative and tech handoff briefs.
 
 ## Deployment
 

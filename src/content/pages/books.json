@@ -1,0 +1,92 @@
+{
+  "slug": "/books/",
+  "pageFamily": "collection",
+  "meta": {
+    "title": "Books | House Pendale",
+    "description": "Begin the Pendaleverse with When Stars Align and follow the books as the House expands.",
+    "ogImage": "/images/WhenStarsAlignCover2Ed.jpg"
+  },
+  "hero": {
+    "eyebrow": "Books",
+    "title": "Every House has a first door.",
+    "support": "There is a clear place to begin. Start with When Stars Align, the first open door into a world where appetite, structure, and consequence share the same spine.",
+    "ctas": [
+      {
+        "label": "Start with When Stars Align",
+        "href": "/books/when-stars-align/",
+        "variant": "primary"
+      },
+      {
+        "label": "Read the Notes",
+        "href": "https://liorapendale.substack.com",
+        "variant": "secondary",
+        "external": true
+      }
+    ],
+    "media": {
+      "src": "/images/WhenStarsAlignCover2Ed.jpg",
+      "alt": "When Stars Align cover art",
+      "kind": "cover"
+    }
+  },
+  "sections": [
+    {
+      "id": "reading-path",
+      "eyebrow": "Reading path",
+      "title": "There is a right place to begin.",
+      "body": "Begin with When Stars Align. Let the world introduce itself in motion. The deeper architecture will meet you when it matters, with clarity first and depth where it counts.",
+      "microcopy": "Start here",
+      "ctas": [
+        {
+          "label": "Start with When Stars Align",
+          "href": "/books/when-stars-align/",
+          "variant": "primary"
+        }
+      ]
+    },
+    {
+      "id": "featured-book",
+      "eyebrow": "Featured book",
+      "title": "The first threshold is already open.",
+      "body": "When Stars Align follows Dr. Elysia Sinclair into a House that recognizes her before she is ready to recognize herself. If you like your fantasy with bones under the silk, this is the clearest place to step inside.",
+      "microcopy": "Available now",
+      "image": "/images/Book_Hero_Image.png",
+      "imageAlt": "Hero image for When Stars Align",
+      "ctas": [
+        {
+          "label": "Read the book",
+          "href": "/books/when-stars-align/",
+          "variant": "primary"
+        }
+      ]
+    },
+    {
+      "id": "shelf-ahead",
+      "eyebrow": "The shelf ahead",
+      "title": "The House is still expanding.",
+      "body": "More doors are coming. This page leaves room for the shelf to grow without asking the live catalogue to wear a false moustache and pretend it already has a ballroom full of titles.",
+      "microcopy": "Future books will join the shelf here when they are ready to stand on their own feet.",
+      "ctas": [
+        {
+          "label": "Enter the House",
+          "href": "/magic-systems/",
+          "variant": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "companion-notes",
+      "eyebrow": "Companion notes",
+      "title": "Some things belong beside the books.",
+      "body": "For release notes, deeper commentary, and companion material that should stay adjacent to the reading path, Substack is where the House keeps speaking after the page ends.",
+      "ctas": [
+        {
+          "label": "Read the Notes",
+          "href": "https://liorapendale.substack.com",
+          "variant": "secondary",
+          "external": true
+        }
+      ]
+    }
+  ]
+}

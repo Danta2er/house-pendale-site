@@ -1,0 +1,62 @@
+---
+import CtaLink from "@components/CtaLink.astro";
+
+type Cta = {
+  label: string;
+  href: string;
+  variant?: "primary" | "secondary" | "tertiary";
+  external?: boolean;
+};
+
+type Section = {
+  id: string;
+  eyebrow?: string;
+  title: string;
+  body: string;
+  microcopy?: string;
+  image?: string;
+  imageAlt?: string;
+  ctas?: Cta[];
+};
+
+type Props = {
+  section: Section;
+  reverse?: boolean;
+};
+
+const { section, reverse = false } = Astro.props;
+const paragraphs = section.body.split("\n\n");
+---
+
+<section id={section.id} class:list={["section-block", "feature-split", reverse && "reverse"]}>
+  <div class="feature-copy" data-reveal>
+    {section.eyebrow && <span class="eyebrow">{section.eyebrow}</span>}
+    <h2>{section.title}</h2>
+    <div class="stacked-copy">
+      {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+    {section.microcopy && <p class="microcopy">{section.microcopy}</p>}
+    {
+      section.ctas && (
+        <div class="button-row">
+          {section.ctas.map((cta) => (
+            <CtaLink
+              href={cta.href}
+              label={cta.label}
+              variant={cta.variant}
+              external={cta.external}
+            />
+          ))}
+        </div>
+      )
+    }
+  </div>
+
+  {
+    section.image && (
+      <figure class="feature-media" data-reveal>
+        <img src={section.image} alt={section.imageAlt ?? section.title} />
+      </figure>
+    )
+  }
+</section>

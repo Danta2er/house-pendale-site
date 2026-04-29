@@ -1,0 +1,89 @@
+{
+  "slug": "when-stars-align",
+  "title": "When Stars Align",
+  "shortTitle": "WSA",
+  "status": "Available now",
+  "route": "/books/when-stars-align/",
+  "cover": "/images/WhenStarsAlignCover2Ed.jpg",
+  "coverAlt": "When Stars Align cover art by Liora Pendale",
+  "meta": {
+    "title": "When Stars Align | House Pendale",
+    "description": "Enter House Pendale through When Stars Align, a dark romantic fantasy of ritual, desire, and cosmological consequence.",
+    "ogImage": "/images/WhenStarsAlignCover2Ed.jpg"
+  },
+  "hero": {
+    "eyebrow": "Book One",
+    "title": "One woman steps up to a House that knows exactly what to do with her.",
+    "support": "Dr. Elysia Sinclair arrives in North Carolina with credentials, restraint, and a talent for explaining away whatever she can't safely want. Then she meets Coren Jarrell. She steps up to a House built like a ritual instrument. And she opens the same door you're standing in front of now.",
+    "ctas": [
+      {
+        "label": "Buy the Book",
+        "href": "https://www.amazon.com/dp/B0F6KXSR54",
+        "variant": "primary",
+        "external": true
+      },
+      {
+        "label": "Meet the Characters",
+        "href": "/characters/",
+        "variant": "secondary"
+      }
+    ]
+  },
+  "premise": {
+    "id": "premise",
+    "eyebrow": "Premise",
+    "title": "The first crack opens fast.",
+    "body": "Elysia is brilliant, funny, and very used to staying in control of herself. Coren sees through that architecture almost immediately. What begins as attraction becomes a collision with real magic, real structure, and a future larger than either of them can politely ignore.",
+    "ctas": [
+      {
+        "label": "Read When Stars Align",
+        "href": "https://www.amazon.com/dp/B0F6KXSR54",
+        "variant": "primary",
+        "external": true
+      }
+    ]
+  },
+  "experience": {
+    "id": "reading-experience",
+    "eyebrow": "Reading experience",
+    "title": "Heat with a spine.",
+    "body": "This is erotic urban fantasy with discipline in its bones. The banter is sharp, the emotional arc lands cleanly, and the magic stays consequential from first spark to final cost. Every intimate turn changes the shape of the world around the people inside it.",
+    "microcopy": "For readers who want body, wit, and real stakes in the same sentence.",
+    "ctas": [
+      {
+        "label": "Meet the Characters",
+        "href": "/characters/",
+        "variant": "secondary"
+      }
+    ]
+  },
+  "heatNote": {
+    "title": "Know exactly what door you're opening.",
+    "body": "When Stars Align is a high-heat, explicit erotic urban fantasy with ongoing D/s dynamics, strong magical structure, polyamorous relationship dynamics, and supernatural danger in the final act. The book is honest about its appetite and equally serious about consent, consequence, and emotional payoff.",
+    "microcopy": "Available in ebook and print formats where listed.",
+    "ctas": [
+      {
+        "label": "Buy the Book",
+        "href": "https://www.amazon.com/dp/B0F6KXSR54",
+        "variant": "primary",
+        "external": true
+      }
+    ]
+  },
+  "companion": {
+    "id": "companion-depth",
+    "eyebrow": "Companion depth",
+    "title": "When you want the deeper edge.",
+    "body": "Substack is where the surrounding notes live: companion essays, world edges, and the kind of post-read expansion that belongs beside the chamber, in its own deliberate space.",
+    "ctas": [
+      {
+        "label": "Read the Notes",
+        "href": "https://liorapendale.substack.com",
+        "variant": "secondary",
+        "external": true
+      }
+    ]
+  },
+  "relatedCharacterIds": ["elysia", "coren", "hannah", "rachel", "ezra"],
+  "relatedSystemIds": ["pulse-resonance", "wordframe", "covenant"]
+}

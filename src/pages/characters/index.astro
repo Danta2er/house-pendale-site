@@ -1,0 +1,40 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import HeroBlock from "@components/HeroBlock.astro";
+import CharacterGrid from "@components/CharacterGrid.astro";
+import SectionBlock from "@components/SectionBlock.astro";
+import { personSchema, websiteSchema } from "@utils/schemas";
+import { siteConfig } from "@data/site";
+
+const page = await getEntry("pages", "characters");
+const characters = (await getCollection("characters")).sort((a, b) => a.data.order - b.data.order);
+
+if (!page) {
+  throw new Error("Missing characters page entry.");
+}
+
+const schema = [
+  websiteSchema({
+    name: siteConfig.name,
+    url: siteConfig.canonicalUrl,
+    description: siteConfig.description,
+  }),
+  personSchema({
+    name: siteConfig.author,
+    url: siteConfig.canonicalUrl,
+  }),
+];
+---
+
+<BaseLayout
+  title={page.data.meta.title}
+  description={page.data.meta.description}
+  ogImage={page.data.meta.ogImage}
+  canonicalPath="/characters/"
+  schema={schema}
+>
+  <HeroBlock {...page.data.hero} compact />
+  <CharacterGrid characters={characters} />
+  <SectionBlock section={page.data.sections[0]} />
+</BaseLayout>

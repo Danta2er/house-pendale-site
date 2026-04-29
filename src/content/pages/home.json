@@ -1,0 +1,98 @@
+{
+  "slug": "/",
+  "pageFamily": "threshold",
+  "meta": {
+    "title": "House Pendale | Enter the House",
+    "description": "Enter House Pendale, where desire, ritual, and cosmology collide. Start with When Stars Align or step deeper into the world.",
+    "ogImage": "/images/Book_Hero_Image.png"
+  },
+  "hero": {
+    "eyebrow": "Threshold",
+    "title": "Enter a House where craving has rules.",
+    "support": "You are standing at the public threshold of a world shaped by ritual, desire, and consequence. Start with When Stars Align, or step deeper into the people and systems that give the House its pull.",
+    "ctas": [
+      {
+        "label": "Read When Stars Align",
+        "href": "/books/when-stars-align/",
+        "variant": "primary"
+      },
+      {
+        "label": "Enter the House",
+        "href": "/house/",
+        "variant": "secondary"
+      }
+    ],
+    "media": {
+      "src": "/images/Book_Hero_Image.png",
+      "alt": "When Stars Align by Liora Pendale",
+      "kind": "cover"
+    }
+  },
+  "sections": [
+    {
+      "id": "start-with-the-book",
+      "eyebrow": "Start with the book",
+      "title": "Begin where the first crack opens.",
+      "body": "When Stars Align is the cleanest way into the Pendaleverse: a high-heat urban fantasy where a British professor, a man who has been waiting far too long, and a House with opinions about both of them collide under rules your body will understand before your brain finishes filing the paperwork.",
+      "microcopy": "Current entry book",
+      "image": "/images/WhenStarsAlignCover2Ed.jpg",
+      "imageAlt": "When Stars Align cover art",
+      "ctas": [
+        {
+          "label": "Read When Stars Align",
+          "href": "/books/when-stars-align/",
+          "variant": "primary"
+        }
+      ]
+    },
+    {
+      "id": "enter-the-world",
+      "eyebrow": "Enter the world",
+      "title": "The House keeps its own grammar.",
+      "body": "Behind the book sits a living structure of characters, rituals, and magical systems built with clean edges. Cross the threshold through one good door, and let the rest of the map reveal itself in motion.",
+      "microcopy": "Meet the cast. Learn the systems. Follow the current.",
+      "image": "/images/Ritual_Room_Canon_042226.png",
+      "imageAlt": "An interior room inside House Pendale",
+      "ctas": [
+        {
+          "label": "Enter the House",
+          "href": "/house/",
+          "variant": "secondary"
+        },
+        {
+          "label": "Meet the Cast",
+          "href": "/characters/",
+          "variant": "tertiary"
+        }
+      ]
+    },
+    {
+      "id": "follow-the-house",
+      "eyebrow": "Follow the House",
+      "title": "Stay where the world keeps speaking.",
+      "body": "Follow the House across Instagram, Threads, TikTok, X, Bluesky, and Substack. The socials keep the fire visible. Substack holds the deeper notes, the stranger edges, and the material that deserves a room of its own.",
+      "microcopy": "For deeper notes, rituals, and world edges, read the Notes on Substack.",
+      "image": "/images/Liora_desk_canon_042226.png",
+      "imageAlt": "Liora Pendale at her desk",
+      "ctas": [
+        {
+          "label": "Follow the House",
+          "href": "#follow-the-house",
+          "variant": "secondary"
+        }
+      ]
+    }
+  ],
+  "close": {
+    "title": "Choose your first door, then let the rest of the House answer in motion.",
+    "body": "The threshold should feel awake, not crowded. Start with the book, enter through the systems, or follow the House into its deeper notes without asking the homepage to hold every room at once.",
+    "ctas": [
+      {
+        "label": "Read the Notes",
+        "href": "https://liorapendale.substack.com",
+        "variant": "secondary",
+        "external": true
+      }
+    ]
+  }
+}

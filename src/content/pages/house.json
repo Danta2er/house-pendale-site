@@ -1,0 +1,99 @@
+{
+  "slug": "/house/",
+  "pageFamily": "threshold",
+  "meta": {
+    "title": "The House | House Pendale",
+    "description": "Step inside House Pendale and follow the people, systems, and rooms that give the Pendaleverse its structure.",
+    "ogImage": "/images/House/House_floor_plan.png"
+  },
+  "hero": {
+    "title": "Some thresholds welcome you. This one pays attention.",
+    "support": "You're past the front threshold now. The House is where the Pendaleverse gathers itself into structure: people, power, witness, consequence, all held in the same set of hands. Step toward the systems, the cast, or the book that opens the first clean door, and let the House tell you what catches in your ribs.",
+    "ctas": [
+      {
+        "label": "Enter the Systems",
+        "href": "/magic-systems/",
+        "variant": "primary"
+      },
+      {
+        "label": "Meet the People",
+        "href": "/characters/",
+        "variant": "secondary"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "house-definition",
+      "title": "Warmth with rules.",
+      "body": "The House is living architecture. She holds the pressure, keeps the line, and changes the air around anyone worth noticing. Desire sharpens here. Discipline lands here. Witness means something here. You don't need a floor plan and a docent with a flashlight. You need the central truth: the House is the frame that turns feeling into consequence.",
+      "microcopy": "Architecture that notices."
+    },
+    {
+      "id": "people-path",
+      "title": "Follow the people who change the temperature.",
+      "body": "Some readers enter through systems. Some enter through faces, voices, and the exact person who ruins their concentration first. Elysia, Coren, Hannah, Rachel, and Ezra each pull on the House differently. Follow them, and the interior starts showing its teeth, its humour, and its heart all at once.",
+      "microcopy": "Start with the ones who change the air.",
+      "ctas": [
+        {
+          "label": "Meet the People",
+          "href": "/characters/",
+          "variant": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "systems-path",
+      "title": "Follow the rules that keep the fire honest.",
+      "body": "The House doesn't run on vibes and lube. She runs on structure. Pulse Resonance, Wordframe, and Covenant give the world its current, its grammar, and its price. Start there if you want the bones before the blood starts singing.",
+      "microcopy": "Structure first. The rest follows.",
+      "ctas": [
+        {
+          "label": "Enter the Systems",
+          "href": "/magic-systems/",
+          "variant": "primary"
+        }
+      ]
+    },
+    {
+      "id": "deeper-interiors",
+      "title": "Some doors open later on purpose.",
+      "body": "The House has further chambers, stranger moods, and edges that deserve more privacy than a public page should pretend to offer. You'll feel the pull here. The deeper notes can wait until they've earned their own room.",
+      "microcopy": "More chambers are coming when they're ready to hold weight.",
+      "ctas": [
+        {
+          "label": "Read the Notes",
+          "href": "https://liorapendale.substack.com",
+          "variant": "secondary",
+          "external": true
+        }
+      ]
+    }
+  ],
+  "close": {
+    "body": "Choose the door that feels most alive to you. Follow the people. Enter the systems. Start with When Stars Align if you want story first and answers in motion. The House can hold all three. She just prefers you pick one and mean it.",
+    "ctas": [
+      {
+        "label": "Enter the Systems",
+        "href": "/magic-systems/",
+        "variant": "primary"
+      },
+      {
+        "label": "Meet the People",
+        "href": "/characters/",
+        "variant": "secondary"
+      },
+      {
+        "label": "Start with the Book",
+        "href": "/books/when-stars-align/",
+        "variant": "tertiary"
+      },
+      {
+        "label": "Read the Notes",
+        "href": "https://liorapendale.substack.com",
+        "variant": "secondary",
+        "external": true
+      }
+    ]
+  }
+}

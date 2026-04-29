@@ -1,0 +1,81 @@
+---
+import { getEntry } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import HeroBlock from "@components/HeroBlock.astro";
+import SectionBlock from "@components/SectionBlock.astro";
+import CtaLink from "@components/CtaLink.astro";
+import { collectionPageSchema, personSchema, websiteSchema } from "@utils/schemas";
+import { siteConfig } from "@data/site";
+
+const page = await getEntry("pages", "house");
+
+if (!page) {
+  throw new Error("Missing house page entry.");
+}
+
+const schema = [
+  websiteSchema({
+    name: siteConfig.name,
+    url: siteConfig.canonicalUrl,
+    description: siteConfig.description,
+  }),
+  personSchema({
+    name: siteConfig.author,
+    url: siteConfig.canonicalUrl,
+  }),
+  collectionPageSchema({
+    name: "The House",
+    description: page.data.meta.description,
+    url: new URL("/house/", Astro.site).toString(),
+  }),
+];
+---
+
+<BaseLayout
+  title={page.data.meta.title}
+  description={page.data.meta.description}
+  ogImage={page.data.meta.ogImage}
+  canonicalPath="/house/"
+  schema={schema}
+>
+  <div class="house-page">
+    <HeroBlock {...page.data.hero} compact />
+    <SectionBlock section={page.data.sections[0]} />
+
+    <section class="house-route-grid section-block">
+      <div class="route-grid">
+        {page.data.sections.slice(1).map((section) => (
+          <article id={section.id} class="route-card" data-reveal>
+            <h2>{section.title}</h2>
+            <p>{section.body}</p>
+            {section.microcopy && <p class="microcopy">{section.microcopy}</p>}
+            {section.ctas && (
+              <div class="button-row">
+                {section.ctas.map((cta) => (
+                  <CtaLink
+                    href={cta.href}
+                    label={cta.label}
+                    variant={cta.variant}
+                    external={cta.external}
+                  />
+                ))}
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    </section>
+
+    {page.data.close && (
+      <section class="close-panel" data-reveal>
+        {page.data.close.title && <h2>{page.data.close.title}</h2>}
+        <p>{page.data.close.body}</p>
+        <div class="button-row">
+          {page.data.close.ctas.map((cta) => (
+            <CtaLink href={cta.href} label={cta.label} variant={cta.variant} external={cta.external} />
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</BaseLayout>

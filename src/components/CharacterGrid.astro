@@ -1,0 +1,55 @@
+---
+import CtaLink from "@components/CtaLink.astro";
+
+type Character = {
+  id: string;
+  data: {
+    slug: string;
+    name: string;
+    role: string;
+    hook: string;
+    microcopy: string;
+    image: string;
+    imageAlt: string;
+  };
+};
+
+type Props = {
+  characters: Character[];
+};
+
+const { characters } = Astro.props;
+---
+
+<section class="character-grid-section">
+  <div class="anchor-rail" data-reveal>
+    {
+      characters.map((character) => (
+        <CtaLink
+          href={`#${character.data.slug}`}
+          label={`Meet ${character.data.name.split(" ")[0]}`}
+          variant="tertiary"
+        />
+      ))
+    }
+  </div>
+
+  <div class="character-grid">
+    {
+      characters.map((character) => (
+        <article id={character.data.slug} class="character-card" data-reveal>
+          <div class="character-card-media">
+            <img src={character.data.image} alt={character.data.imageAlt} />
+          </div>
+          <div class="character-card-body">
+            <span class="eyebrow">Character</span>
+            <h2>{character.data.name}</h2>
+            <p class="card-microcopy">{character.data.microcopy}</p>
+            <p>{character.data.hook}</p>
+            <p class="microcopy">{character.data.role}</p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

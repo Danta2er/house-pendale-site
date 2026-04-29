@@ -1,0 +1,91 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import HeroBlock from "@components/HeroBlock.astro";
+import SectionBlock from "@components/SectionBlock.astro";
+import CharacterGrid from "@components/CharacterGrid.astro";
+import CtaLink from "@components/CtaLink.astro";
+import { bookSchema, personSchema, websiteSchema } from "@utils/schemas";
+import { siteConfig } from "@data/site";
+
+const book = await getEntry("books", "when-stars-align");
+const characters = (await getCollection("characters"))
+  .filter((entry) => book?.data.relatedCharacterIds.includes(entry.id))
+  .sort((a, b) => a.data.order - b.data.order);
+
+if (!book) {
+  throw new Error("Missing When Stars Align book entry.");
+}
+
+const schema = [
+  websiteSchema({
+    name: siteConfig.name,
+    url: siteConfig.canonicalUrl,
+    description: siteConfig.description,
+  }),
+  personSchema({
+    name: siteConfig.author,
+    url: siteConfig.canonicalUrl,
+  }),
+  bookSchema({
+    title: book.data.title,
+    image: new URL(book.data.cover, Astro.site).toString(),
+    description: book.data.meta.description,
+    url: new URL(book.data.route, Astro.site).toString(),
+    buyUrl: siteConfig.amazonUrl,
+  }),
+];
+---
+
+<BaseLayout
+  title={book.data.meta.title}
+  description={book.data.meta.description}
+  ogImage={book.data.meta.ogImage}
+  canonicalPath="/books/when-stars-align/"
+  schema={schema}
+>
+  <div class="book-detail-page">
+    <HeroBlock
+      eyebrow={book.data.hero.eyebrow}
+      title={book.data.hero.title}
+      support={book.data.hero.support}
+      ctas={book.data.hero.ctas}
+      media={{ src: "/images/Book_Hero_Image.png", alt: book.data.coverAlt, kind: "cover" }}
+      compact
+    />
+
+    <section class="section-block book-shell book-premise-shell">
+    <div class="book-copy-block" data-reveal>
+      <span class="eyebrow">{book.data.premise.eyebrow}</span>
+      <h2>{book.data.premise.title}</h2>
+      <p>{book.data.premise.body}</p>
+      <div class="button-row">
+        {book.data.premise.ctas?.map((cta) => (
+          <CtaLink href={cta.href} label={cta.label} variant={cta.variant} external={cta.external} />
+        ))}
+      </div>
+    </div>
+    </section>
+
+    <SectionBlock section={book.data.experience} />
+
+    <section class="section-block book-shell">
+      <div class="book-copy-block heat-note-block" data-reveal>
+        <span class="eyebrow">Heat and content</span>
+        <h2>{book.data.heatNote.title}</h2>
+        <p>{book.data.heatNote.body}</p>
+        <p class="microcopy">{book.data.heatNote.microcopy}</p>
+        <div class="button-row">
+          {book.data.heatNote.ctas.map((cta) => (
+            <CtaLink href={cta.href} label={cta.label} variant={cta.variant} external={cta.external} />
+          ))}
+        </div>
+      </div>
+      <div class="book-note" data-reveal>
+        <CharacterGrid characters={characters} />
+      </div>
+    </section>
+
+    <SectionBlock section={book.data.companion} reverse />
+  </div>
+</BaseLayout>

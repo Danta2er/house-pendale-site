@@ -1,6 +1,9 @@
 .netlify/
+.astro/
 node_modules/
 dist/
 .DS_Store
 Thumbs.db
 *.log
+public/images/characters/Original size/
+public/images/House/floorplan_background_reduced.png

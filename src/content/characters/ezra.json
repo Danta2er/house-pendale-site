@@ -1,0 +1,11 @@
+{
+  "slug": "ezra",
+  "name": "Ezra",
+  "role": "Steward. Guardrail. Oath-bound witness.",
+  "hook": "Ezra carries covenant, caution, and the weary grace of someone who knows exactly how expensive power can become. He is proof that reverence and dry humor can share the same breath without cancelling each other out.",
+  "microcopy": "The man reading the small print while the world catches fire.",
+  "image": "/images/characters/ezra.png",
+  "imageAlt": "Ezra portrait",
+  "relatedBookSlug": "when-stars-align",
+  "order": 5
+}
