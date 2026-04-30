@@ -1,17 +1,13 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getEntry } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import HeroBlock from "@components/HeroBlock.astro";
 import SectionBlock from "@components/SectionBlock.astro";
-import CharacterGrid from "@components/CharacterGrid.astro";
 import CtaLink from "@components/CtaLink.astro";
 import { bookSchema, personSchema, websiteSchema } from "@utils/schemas";
 import { siteConfig } from "@data/site";
 
 const book = await getEntry("books", "when-stars-align");
-const characters = (await getCollection("characters"))
-  .filter((entry) => book?.data.relatedCharacterIds.includes(entry.id))
-  .sort((a, b) => a.data.order - b.data.order);
 
 if (!book) {
   throw new Error("Missing When Stars Align book entry.");
@@ -80,9 +76,6 @@ const schema = [
             <CtaLink href={cta.href} label={cta.label} variant={cta.variant} external={cta.external} />
           ))}
         </div>
-      </div>
-      <div class="book-note" data-reveal>
-        <CharacterGrid characters={characters} />
       </div>
     </section>
 

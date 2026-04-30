@@ -351,6 +351,10 @@ p {
   width: min(55%, 26.75rem);
 }
 
+.book-detail-page .hero-block.compact {
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
 .hero-media.portrait img,
 .hero-media.atmosphere img,
 .hero-media.artifact img {
