@@ -11,6 +11,7 @@ const ctaSchema = z.object({
   href: z.string(),
   variant: z.enum(["primary", "secondary", "tertiary"]).default("primary"),
   external: z.boolean().default(false),
+  futureDoor: z.boolean().default(false),
   note: z.string().optional(),
 });
 

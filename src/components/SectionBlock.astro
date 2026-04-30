@@ -6,6 +6,7 @@ type Cta = {
   href: string;
   variant?: "primary" | "secondary" | "tertiary";
   external?: boolean;
+  futureDoor?: boolean;
 };
 
 type Section = {
@@ -45,6 +46,7 @@ const paragraphs = section.body.split("\n\n");
               label={cta.label}
               variant={cta.variant}
               external={cta.external}
+              futureDoor={cta.futureDoor}
             />
           ))}
         </div>

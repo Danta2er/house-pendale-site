@@ -1,9 +1,12 @@
 ---
+import { futureDoorMessages } from "@data/site";
+
 type Props = {
   href: string;
   label: string;
   variant?: "primary" | "secondary" | "tertiary";
   external?: boolean;
+  futureDoor?: boolean;
   className?: string;
 };
 
@@ -12,15 +15,94 @@ const {
   label,
   variant = "primary",
   external = false,
+  futureDoor = false,
   className = "",
 } = Astro.props;
+
+const noteId = `future-door-${Math.random().toString(36).slice(2, 10)}`;
+const messagePool = JSON.stringify(futureDoorMessages);
 ---
 
-<a
-  class:list={["button-link", variant, className]}
-  href={href}
-  target={external ? "_blank" : undefined}
-  rel={external ? "noopener noreferrer" : undefined}
->
-  {label}
-</a>
+{
+  futureDoor ? (
+    <span class="future-door-wrap" data-future-door>
+      <button
+        type="button"
+        class:list={["button-link", "future-door-trigger", variant, className]}
+        aria-controls={noteId}
+        aria-expanded="false"
+        data-future-door-button
+        data-future-door-messages={messagePool}
+      >
+        {label}
+      </button>
+      <span id={noteId} class="future-door-note" hidden aria-live="polite"></span>
+    </span>
+  ) : (
+    <a
+      class:list={["button-link", variant, className]}
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+    >
+      {label}
+    </a>
+  )
+}
+
+{
+  futureDoor && (
+    <script is:inline>
+      {`
+        if (!window.__houseFutureDoorInit) {
+          window.__houseFutureDoorInit = true;
+
+          const closeFutureDoors = (except) => {
+            document.querySelectorAll("[data-future-door]").forEach((container) => {
+              if (except && container === except) return;
+              container.dataset.open = "false";
+              const note = container.querySelector(".future-door-note");
+              const button = container.querySelector("[data-future-door-button]");
+              if (note) note.hidden = true;
+              if (button) button.setAttribute("aria-expanded", "false");
+            });
+          };
+
+          document.addEventListener("click", (event) => {
+            const button = event.target.closest("[data-future-door-button]");
+            const container = event.target.closest("[data-future-door]");
+
+            if (!button || !container) {
+              closeFutureDoors();
+              return;
+            }
+
+            event.preventDefault();
+
+            const note = container.querySelector(".future-door-note");
+            if (!note) return;
+
+            let message = button.dataset.futureDoorMessage;
+            if (!message) {
+              const messages = JSON.parse(button.dataset.futureDoorMessages || "[]");
+              message = messages[Math.floor(Math.random() * messages.length)] || "";
+              button.dataset.futureDoorMessage = message;
+            }
+
+            closeFutureDoors(container);
+            note.textContent = message;
+            note.hidden = false;
+            container.dataset.open = "true";
+            button.setAttribute("aria-expanded", "true");
+          });
+
+          document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+              closeFutureDoors();
+            }
+          });
+        }
+      `}
+    </script>
+  )
+}

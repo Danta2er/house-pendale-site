@@ -24,3 +24,16 @@ export const siteConfig = {
     { label: "Read the Notes", href: "https://liorapendale.substack.com", external: true },
   ],
 } as const;
+
+export const futureDoorMessages = [
+  "The House doesn't reveal every room at once.",
+  "The House keeps some doors closed until you're ready to want them properly.",
+  "The House reveals herself in stages. She likes to see what you do with wanting.",
+  "Some rooms answer quickly. Some make you wait a little and mean it.",
+  "The House lets you in by degrees.",
+  "The House opens where it wants to open, and she's usually right.",
+  "The whole interior never arrives at once. The House prefers to make you ache for the next door.",
+  "The House gives you one true door at a time.",
+  "Every room has its hour. The House knows which one you're standing in.",
+  "The House keeps some thresholds for later. Not out of cruelty. Out of taste.",
+] as const;
