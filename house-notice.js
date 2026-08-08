@@ -73,6 +73,10 @@
     var target = event.target;
     var button = target && target.closest ? target.closest("#house-notice button[data-choice]") : null;
     if (!button) return;
+    // This modal action must never fall through to the Design export's
+    // page-level click handling or navigate away from the gate.
+    event.preventDefault();
+    event.stopImmediatePropagation();
     var consent = button.getAttribute("data-choice") === "yes";
     localStorage.setItem(gateKey, "yes");
     localStorage.setItem(analyticsKey, consent ? "yes" : "no");
