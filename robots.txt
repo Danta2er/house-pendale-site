@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://liorapendale.com/sitemap.xml
